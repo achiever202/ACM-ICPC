@@ -1,0 +1,2 @@
+1. If the data of a set is represented in binary, you can reduce the number of into ciel(n/32) groups by forming groups of 32 bits and making them integers. Then you can find the intersection of the sets by taking corresponding ands of integers.
+  Tutorial: http://discuss.codechef.com/questions/47984/rrfrnds-editorial
