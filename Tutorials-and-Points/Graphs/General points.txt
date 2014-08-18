@@ -1,0 +1,2 @@
+1. Given an adjacency matrix of a edges (1 representing path annd 0 representing no path), the (i,j)th entry of kth power of the matrix represents the number of walks of length k from vertex i to vertex j.
+  Tutorial - http://discuss.codechef.com/questions/47984/rrfrnds-editorial
