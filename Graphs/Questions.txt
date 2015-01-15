@@ -11,3 +11,7 @@ http://codeforces.com/problemset/problem/295/B - application floyd warshall
 http://codeforces.com/problemset/problem/500/D
 
 http://codeforces.com/problemset/problem/24/A
+
+http://codeforces.com/problemset/problem/232/A
+
+http://codeforces.com/contest/263/problem/D
