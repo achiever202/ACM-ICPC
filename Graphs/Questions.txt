@@ -15,3 +15,11 @@ http://codeforces.com/problemset/problem/24/A
 http://codeforces.com/problemset/problem/232/A
 
 http://codeforces.com/contest/263/problem/D
+
+http://codeforces.com/problemset/problem/25/C
+
+http://codeforces.com/problemset/problem/327/D
+
+http://codeforces.com/problemset/problem/144/D
+
+http://codeforces.com/contest/25/problem/D
