@@ -27,12 +27,14 @@ void create_set(ll n)
 
 ll find_parent(ll index)
 {
+	ll temp = index;
 	while(disjoint_set[index]!=index)
 	{
 		disjoint_set[index] = disjoint_set[disjoint_set[index]];
 		index = disjoint_set[index];
 	}
-
+	
+	disjoint_set[temp] = index;
 	return index;
 }
 
