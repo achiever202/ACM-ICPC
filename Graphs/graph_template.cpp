@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <algorithm>
 #include <stdlib.h>
+#include <math.h>
 
 #define max_nodes_size 100005
 #define ll long long int
@@ -33,6 +34,7 @@ class graph
 		vector <edge> edges;
 		ll parent;
 		ll cost;
+		ll level;
 }nodes[max_nodes_size];
 
 ll nodes_size;
@@ -57,9 +59,17 @@ void fill_array(ll ar[], ll value, ll size)
 		ar[i] = value;
 }
 
-void input_graph(bool is_undirected, bool is_cost, bool is_tree);
+void input_graph(bool is_undirected, bool is_cost, bool is_tree)
 {
 	cin>>nodes_size;
+
+	for(ll i=1; i<=nodes_size; i++)
+	{
+		nodes[i].node = i;
+		nodes[i].parent = -1;
+		nodes[i].cost = -1;
+		nodes[i].edges.clear();
+	}
 
 	if(is_tree)
 		edge_size = nodes_size-1;
@@ -115,9 +125,9 @@ void recursive_dfs(ll node, ll parent)
 	{
 		if(nodes[node].edges[i].node!=parent)
 		{
-			if(!visited[nodes].edges[i].node)
+			if(!visited[nodes[node].edges[i].node])
 			{
-				dfs(nodes[node].edges[i].node, node);
+				recursive_dfs(nodes[node].edges[i].node, node);
 			}
 		}
 	}
@@ -127,6 +137,7 @@ void iterative_dfs(ll node)
 {
 	stack <ll> dfs;
 	nodes[node].parent = -1;
+	nodes[node].level = 0;
 	visited[node] = 1;
 	dfs.push(node);
 
@@ -139,10 +150,13 @@ void iterative_dfs(ll node)
 		{
 			if(nodes[cur_node].edges[i].node!=nodes[cur_node].parent)
 			{
-				if(!visited[nodes[cur_node].edges[i].node])
+				ll next_node = nodes[cur_node].edges[i].node;
+				if(!visited[next_node])
 				{
-					visited[nodes[cur_node].edges[i].node] = 1;
-					dfs.push(nodes[cur_node].edges[i].node);
+					visited[next_node] = 1;
+					nodes[next_node].level = nodes[cur_node].level+1;
+					nodes[next_node].parent = cur_node;
+					dfs.push(next_node);
 				}
 			}
 		}
