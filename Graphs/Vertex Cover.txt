@@ -1,0 +1,13 @@
+1. A vertex cover (sometimes node cover) of a graph is a set of vertices such that each edge of the graph is incident to at least one vertex of the set.
+
+2. Finding the minimum vertex cover is NP-Complete.
+
+3. The endpoints of any maximal matching form a vertex cover.
+
+4. The complete bipartite graph K_{m,n} has a minimum vertex cover of size min(m,n).
+
+5. A set of vertices is a vertex cover if and only if its complement is an independent set.
+
+6. Consequently, the number of vertices of a graph is equal to its minimum vertex cover number plus the size of a maximum independent set.
+
+7. According to Konig's theorem, in any bipartite graph, the number of edges in a maximum matching is equal to the number of vertices in a minimum vertex cover.
