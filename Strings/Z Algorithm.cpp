@@ -20,7 +20,7 @@
 
 #define max_nodes_size 2000000
 #define max_size 1002000
-#define ll long long int unsigned
+#define ll long long int
 #define mod 1000000007
 
 #define sd(n) scanf("%d", &n)
@@ -43,7 +43,7 @@ using namespace std;
  * @parameter p: the string for which the prefixes have to be found.
  * @return z_vector: the corresponding z vector.
  */
-vl z_algprithm(string p)
+vl z_algorithm(string p)
 {
 	vl z_vector;
 	z_vector.push_back(-1);
