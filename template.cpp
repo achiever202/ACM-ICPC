@@ -3,18 +3,34 @@
  */
  
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <vector>
-#include <algorithm>
-#include <stack>
-#include <math.h>
 #include <queue>
+#include <vector>
+#include <set>
+#include <stack>
+#include <string.h>
+#include <stdio.h>
+#include <algorithm>
+#include <stdlib.h>
+#include <cassert>
+#include <math.h>
 
-#define ll long long int
-#define maxn 100000
-#define sieve_max 1000000
+#define max_nodes_size 2000000
+#define max_size 1002000
+#define ll long long int unsigned
+#define mod 1000000007
+
+#define sd(n) scanf("%d", &n)
+#define sll(n) scanf("%lld", &n)
+#define w(t) while(t--)
+#define fi(i,n) for(ll i=0; i<n; i++)
+#define fd(i,n) for(ll i=n; i>=0; i--)
+#define pb push_back
+#define pl pair<ll>
+#define pll pair<ll, ll>
+#define vi vector<int>
+#define vl vector<ll>
+#define f first
+#define s second
 
 using namespace std;
 
@@ -119,3 +135,17 @@ void build_ncr_table(ll n)
             ncr_table[i][j] = ncr_table[i-1][j-1] + ncr_table[i-1][j];
     }
 }
+
+void fill_array(ll ar[], ll value, ll size)
+{
+	for(ll i=0; i<size; i++)
+		ar[i] = value;
+}
+
+void print_ll_vector(vector <ll> v)
+{
+	for(ll i=0; i<v.size(); i++)
+		cout<<v[i]<<" ";
+	cout<<endl;
+}
+
